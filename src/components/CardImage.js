@@ -1,21 +1,21 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-const CardImage = () => {
-    return (
-      <Image>
-        <img src="https://source.unsplash.com/random/300x190" alt="random-pic" />
-      </Image>
-    )
+const CardImage = props => {
+  return (
+    <Image>
+      <img src={props.postImage} alt="random-pic" />
+    </Image>
+  );
+};
+
+const Image = styled.div`
+  background: #fff;
+  height: 190px;
+  transition: opacity 0.25s ease-in-out;
+  &:hover {
+    opacity: 0.9;
   }
-  
-  const Image = styled.div`
-    background: #fff;
-    height: 190px;
-    transition: opacity .25s ease-in-out;
-    &:hover {
-      opacity: .9;
-    }
-  `
+`;
 
-  export { CardImage as default }
+export { CardImage as default };
