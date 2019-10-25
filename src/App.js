@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./components/Card";
+import { avatarList, captionList, imageList } from "./data/CardData";
 import "./App.css";
 
 function App() {
@@ -14,30 +15,22 @@ function App() {
         </div>
         <Card
           name={"Orange Julius"}
-          avatar={
-            "https://cdn.iconscout.com/icon/free/png-256/avatar-366-456318.png"
-          }
-          caption={
-            "Check this pic out and let me know what you think in the comments below!"
-          }
+          avatar={avatarList[0]}
+          caption={captionList[0]}
+          postImage={imageList[1]}
         />
         <Card
           name={"Michael Jordan"}
           time={"1:23 AM"}
-          avatar={
-            "https://cdn.iconscout.com/icon/premium/png-512-thumb/avatar-147-116515.png"
-          }
+          avatar={avatarList[1]}
+          postImage={imageList[3]}
         />
-        <Card time={"8:09 PM"} />
+        <Card time={"8:09 PM"} caption={captionList[2]} />
         <Card
           name={"Princess Peach"}
           time={"6:48 AM"}
-          avatar={
-            "https://cdn.iconscout.com/icon/free/png-512/miss-1420030-1201760.png"
-          }
-          caption={
-            "Words truly fail me when attempting to describe this picture. How does this make you feel?"
-          }
+          avatar={avatarList[2]}
+          postImage={imageList[2]}
         />
       </header>
     </div>
